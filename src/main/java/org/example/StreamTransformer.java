@@ -7,6 +7,22 @@ import java.util.Arrays;
 public class StreamTransformer implements Transformable {
     @Override
     public void transform(String fileIn, String fileOut) {
+       /* int i;
+
+        while((i=stream.read())!= -1){
+
+            System.out.print((char)i);
+        }
+          BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
+
+        int i;
+
+        while((i = bufferedInputStream.read())!= -1){
+
+            System.out.print((char)i);
+        }
+        */
+
         FileInputStream stream;
         StringBuilder result = new StringBuilder();
         try {
@@ -18,7 +34,7 @@ public class StreamTransformer implements Transformable {
 
             System.out.println(result);
 
-            String arrResult[] = result.toString().split(";");
+            String[] arrResult = result.toString().split(";");
 
             String name = arrResult[0];
             String weight = arrResult[1];
